@@ -14,7 +14,7 @@ import java.util.List;
  */
 public class IPAddressInputBox extends InputTextBox {
     private final static int MAX_LENGTH = 15;
-    private final static List<Key> VALID_INPUT = new ArrayList<>(Arrays.asList(
+    private final static List<Key> VALID_INPUT = new ArrayList<Key>(Arrays.asList(
             Key.LEFT, Key.RIGHT,
             Key.BACK_SPACE, Key.DELETE, Key.PERIOD,
             Key.NUMPAD0, Key.DIGIT0,
