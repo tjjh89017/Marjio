@@ -1,8 +1,5 @@
 allprojects {
     apply plugin: 'idea'
-}
-
-subprojects {
     apply plugin: 'java'
     group 'io.github.antijava'
     version '1.0-SNAPSHOT'
@@ -20,6 +17,15 @@ subprojects {
         testCompile 'junit:junit:4.11'
         testCompile 'org.hamcrest:hamcrest-core:1.3'
         compile 'org.jetbrains:annotations:15.0'
+    }
+}
+
+subprojects {
+}
+
+project(':application') {
+    dependencies {
+        compile project(':common')
     }
 }
 
