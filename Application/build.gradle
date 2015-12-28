@@ -7,7 +7,7 @@ dependencies {
     compile project(':common')
 }
 
-mainClassName ='Main'
+mainClassName = 'Main'
 
 jar {
     manifest {

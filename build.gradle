@@ -18,34 +18,3 @@ subprojects {
     }
 }
 
-buildscript {
-    repositories { jcenter() }
-    dependencies {
-        classpath 'com.github.jengelman.gradle.plugins:shadow:1.2.2'
-    }
-}
-
-apply plugin: 'application'
-apply plugin: 'com.github.johnrengelman.shadow'
-
-repositories {
-    mavenCentral()
-}
-dependencies {
-    compile project(':application')
-    compile 'org.jetbrains:annotations:15.0'
-}
-
-shadowJar {
-    mergeServiceFiles()
-}
-
-mainClassName ='Main'
-
-jar {
-    manifest {
-        attributes 'Main-Class': mainClassName
-        attributes 'Manifest-Version': '1.0'
-        attributes 'Class-Path': 'io.github.antijava.marjio'
-    }
-}
