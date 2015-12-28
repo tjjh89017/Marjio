@@ -1,8 +1,5 @@
 apply plugin: 'application'
 
-repositories {
-}
-
 dependencies {
     compile project(':common')
 }
