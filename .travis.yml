@@ -7,6 +7,6 @@ cache:
   directories:
     - $HOME/.gradle/caches/
     - $HOME/.gradle/wrapper/
-install: ./gradlew --refresh-dependencies :application:assemble
-script: ./gradlew --refresh-dependencies :application:test
+install: ./gradlew :application:buildNeeded
+script: ./gradlew -a :application:test
 
