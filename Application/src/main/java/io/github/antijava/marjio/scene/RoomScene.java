@@ -15,6 +15,9 @@ public class RoomScene extends SceneBase {
     public RoomScene(IApplication application, boolean isServer) {
         super(application);
         mIsServer = isServer;
+        if(isServer) {
+            this.getApplication().getServer().start();
+        }
         mCurrentChoice = 0;
     }
 
