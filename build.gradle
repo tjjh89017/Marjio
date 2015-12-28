@@ -1,15 +1,15 @@
 allprojects {
     apply plugin: 'idea'
+}
+
+subprojects {
+    apply plugin: 'java'
     group 'io.github.antijava'
     version '1.0-SNAPSHOT'
 
     repositories {
         mavenCentral()
     }
-}
-
-subprojects {
-    apply plugin: 'java'
 
     compileJava {
         sourceCompatibility = 1.8
