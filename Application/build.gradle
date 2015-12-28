@@ -1,6 +1,18 @@
+apply plugin: 'application'
+
 repositories {
 }
 
 dependencies {
     compile project(':common')
+}
+
+mainClassName ='Main'
+
+jar {
+    manifest {
+        attributes 'Main-Class': mainClassName
+        attributes 'Manifest-Version': '1.0'
+        attributes 'Class-Path': 'io.github.antijava.marjio'
+    }
 }
