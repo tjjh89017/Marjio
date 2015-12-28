@@ -20,12 +20,8 @@ allprojects {
     }
 }
 
-subprojects {
-}
-
 project(':application') {
     dependencies {
         compile project(':common')
     }
 }
-
